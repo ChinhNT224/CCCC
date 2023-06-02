@@ -215,7 +215,7 @@ public class GamePlayManager : MonoBehaviour {
 	}
 
 	IEnumerator currentShowingAdsPopup;
-	
+	private bool isAdShown = false;
 
     public void GameOver()
     {
@@ -227,34 +227,54 @@ public class GamePlayManager : MonoBehaviour {
             showGameOverPopup();
         }
     }
+
 	public IEnumerator showAdPopup()
 	{
-		hasShownAdPopup = true;
-		adsShowView.SetActive (true);
-		adSocreLbl.text = GameManager.score+"";
-		SoundManager.instance.PlayTimerSound ();
-		for (float i=1f; i>0; i-=0.01f) 
+    	hasShownAdPopup = true;
+    	adsShowView.SetActive(true);
+    	adSocreLbl.text = GameManager.score + "";
+    	SoundManager.instance.PlayTimerSound();
+
+    	float countdownDuration = 3f; 
+    	float countdownInterval = 0.1f; 
+
+    	float timer = countdownDuration;
+    	float fillAmountStep = countdownInterval / countdownDuration;
+
+    	while (timer > 0)
 		{
-			adTimerImage.fillAmount =i;
-			yield return new WaitForSeconds (0.1f);
+    		timer -= countdownInterval;
+    		adTimerImage.fillAmount -= fillAmountStep;
+
+    		yield return new WaitForSeconds(countdownInterval);
 		}
-		CancleAdsShow ();
-		SoundManager.instance.StopTimerSound ();
+
+		if (!isAdShown)
+		{
+    		CancleAdsShow();
+    		SoundManager.instance.StopTimerSound();
+		}
 	}
+
 	
-	public  void AdShowSucessfully()
-    {
-        adsShowView.SetActive(false);
-        totalSpawnKnife--;
-		GameManager.isGameOver = false;
-		print (currentCircle.hitedKnife.Count);
-		print (totalSpawnKnife);
-		KnifeCounter.intance.setHitedKnife (totalSpawnKnife);
-		if (KnifeSpawnPoint.childCount == 0) {		
-			StartCoroutine (GenerateKnife ());
-		}
-	}
-	public  void CancleAdsShow()
+	public void AdShowSucessfully()
+	{
+    	adsShowView.SetActive(false);
+    	totalSpawnKnife--;
+    	GameManager.isGameOver = false;
+    	print(currentCircle.hitedKnife.Count);
+    	print(totalSpawnKnife);
+    	KnifeCounter.intance.setHitedKnife(totalSpawnKnife);
+
+   		isAdShown = true;
+
+    	if (KnifeSpawnPoint.childCount == 0)
+    	{
+       		StartCoroutine(GenerateKnife());
+    	}
+	}	
+
+	public void CancleAdsShow()
 	{
 		SoundManager.instance.StopTimerSound ();
 		SoundManager.instance.PlaybtnSfx ();

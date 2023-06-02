@@ -321,9 +321,14 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.21f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.21f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.21f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll"
+-r:"C:/Users/DELL/Documents/GitHub/CCCC/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
 -r:"C:/Users/DELL/Documents/GitHub/CCCC/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Mediation.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Rider.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Services.Core.Analytics.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Services.Core.Environments.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Services.Core.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.TextMeshPro.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.Timeline.Editor.ref.dll"
@@ -355,6 +360,7 @@
 "Assets/KnifeHit/Controll/Timer.cs"
 "Assets/KnifeHit/Controll/TimerText.cs"
 "Assets/KnifeHit/Controll/Toast/Toast.cs"
+"Assets/KnifeHit/Script/AdManager.cs"
 "Assets/KnifeHit/Script/Apple.cs"
 "Assets/KnifeHit/Script/Circle.cs"
 "Assets/KnifeHit/Script/GameController.cs"
@@ -369,6 +375,10 @@
 "Assets/KnifeHit/Script/SettingUI.cs"
 "Assets/KnifeHit/Script/ShopItem.cs"
 "Assets/KnifeHit/Script/SoundManager.cs"
+"Assets/Samples/Advertisement with Mediation/1.0.5/Example Usage/Scripts/BannerExample.cs"
+"Assets/Samples/Advertisement with Mediation/1.0.5/Example Usage/Scripts/InterstitialExample.cs"
+"Assets/Samples/Advertisement with Mediation/1.0.5/Example Usage/Scripts/RewardedExample.cs"
+"Assets/Samples/Advertisement with Mediation/1.0.5/Example Usage/Scripts/VideoRewarded.cs"
 -langversion:9.0
 
 /deterministic

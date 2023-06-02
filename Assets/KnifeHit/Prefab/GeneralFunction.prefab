@@ -263,6 +263,8 @@ MonoBehaviour:
   soundToggle: {fileID: 114506081601056660}
   UIParent: {fileID: 1315319861091268}
   removeAdPriceText: {fileID: 114243358899497066}
+  RemoveAds: {fileID: 0}
+  RestorePurchases: {fileID: 0}
 --- !u!1 &1095051916671810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,7 +1489,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360441588134694}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1497,7 +1499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120.6}
+  m_AnchoredPosition: {x: 0, y: -120.599976}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222512120593977404
@@ -2338,8 +2340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopUIParent: {fileID: 1218066023493640}
-  shopKnifePrefab: {fileID: 114782800331356732, guid: 7fe2ad31adac12240bf24ffb9f8b00f8,
-    type: 3}
+  shopKnifePrefab: {fileID: 114782800331356732, guid: 7fe2ad31adac12240bf24ffb9f8b00f8, type: 3}
   shopPageContent: {fileID: 224731505542220086}
   unlockKnifeCounterLbl: {fileID: 114247781064585858}
   unlockNowBtn: {fileID: 114050483253356638}

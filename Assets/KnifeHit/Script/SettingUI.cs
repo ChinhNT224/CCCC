@@ -10,6 +10,8 @@ public class SettingUI : MonoBehaviour {
 	public  GameObject UIParent;
     public Text removeAdPriceText;
 	public static SettingUI intance;
+	public  Button RemoveAds;
+	public  Button RestorePurchases; 
 
 	void Awake()
 	{
@@ -28,6 +30,7 @@ public class SettingUI : MonoBehaviour {
 			if(arg0)
 				SoundManager.instance.PlaybtnSfx ();
 		} );
+
 	}
 
     public void showUI()
@@ -39,5 +42,8 @@ public class SettingUI : MonoBehaviour {
 	{
 		soundToggle.isOn = GameManager.Sound;
 	}
-
+	public void OnButtonClick()
+    {
+        AdManager.Instance.ToggleAdStatus();
+    }
 }
